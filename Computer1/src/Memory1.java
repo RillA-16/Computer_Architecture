@@ -16,6 +16,7 @@ public class Memory1 {
     }
 
     public void store(short mar, short mbr) {
+    	
         this.memory[mar] = mbr;
     }
 

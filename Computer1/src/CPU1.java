@@ -99,7 +99,7 @@ public class CPU1 {
     Register registers[];
 
     public void setPC(short PC) {
-        // �ʱ� pc�� ����
+        // 占십깍옙 pc占쏙옙 占쏙옙占쏙옙
         this.registers[ERegister.ePC.ordinal()].setValue(PC);
     }
 
@@ -173,35 +173,36 @@ public class CPU1 {
     }
 
     private void ADDA() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
-        // �� �� �� AC�� �����
+        // 占쏙옙 占쏙옙 占쏙옙 AC占쏙옙 占쏙옙占쏙옙占�
         this.LDA();
+        
         // AC + ALU -> AC
         this.registers[ERegister.eAC.ordinal()]
                 .setValue(this.alu.add(this.registers[ERegister.eAC.ordinal()].getValue()));
     }
 
     private void ADDC() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
-        // �� �� �� AC�� �����
+        // 占쏙옙 占쏙옙 占쏙옙 AC占쏙옙 占쏙옙占쏙옙占�
         this.LDC();
         // AC + ALU
         this.alu.add(this.registers[ERegister.eAC.ordinal()].getValue());
     }
 
     private void SUBA() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
-        // �� �� �� AC�� �����
+        // 占쏙옙 占쏙옙 占쏙옙 AC占쏙옙 占쏙옙占쏙옙占�
         this.LDA();
         // AC + ALU
         this.alu.subtrack(this.registers[ERegister.eAC.ordinal()].getValue());
     }
 
     private void SUBC() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
 
         this.LDC();
@@ -213,7 +214,7 @@ public class CPU1 {
     }
 
     private void MULA() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
 
         this.LDA();
@@ -222,7 +223,7 @@ public class CPU1 {
     }
 
     private void MULC() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
 
         this.LDC();
@@ -233,9 +234,9 @@ public class CPU1 {
     }
 
     private void DIVA() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
-        // ���� �� AC�� �����
+        // 占쏙옙占쏙옙 占쏙옙 AC占쏙옙 占쏙옙占쏙옙占�
         this.LDA();
         // AC + ALU
         this.registers[ERegister.eAC.ordinal()]
@@ -243,7 +244,7 @@ public class CPU1 {
     }
 
     private void DIVC() {
-        // AC -> ALU ��� ����
+        // AC -> ALU 占쏙옙占� 占쏙옙占쏙옙
         this.alu.store(this.registers[ERegister.eAC.ordinal()].getValue());
 
         this.LDC();

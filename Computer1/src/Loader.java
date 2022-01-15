@@ -19,6 +19,7 @@ public class Loader {
         String lineCodeSegmentSize = sc.nextLine();
 
         this.sizeHeader = 4;
+        
         this.sizeDataSegment = this.decodeLine(lineDataSegmentSize); // 12
         // 0���� ����
         this.sizeCodeSegment = this.decodeLine(lineCodeSegmentSize); // 46
